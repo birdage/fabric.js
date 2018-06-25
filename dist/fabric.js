@@ -12813,6 +12813,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
             backgroundColor: this.backgroundColor,
             fillRule: this.fillRule,
             globalCompositeOperation: this.globalCompositeOperation,
+            animationSrc: this.animationSrc,
             transformMatrix: this.transformMatrix ? this.transformMatrix.concat() : null,
             skewX: toFixed(this.skewX, NUM_FRACTION_DIGITS),
             skewY: toFixed(this.skewY, NUM_FRACTION_DIGITS)
