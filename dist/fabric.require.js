@@ -6078,6 +6078,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
         fill: "rgb(0,0,0)",
         fillRule: "nonzero",
         globalCompositeOperation: "source-over",
+        animationSrc: null,
         backgroundColor: "",
         selectionBackgroundColor: "",
         stroke: null,
@@ -7026,7 +7027,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
         _calcRotateMatrix: function() {
             if (this.angle) {
                 var theta = degreesToRadians(this.angle), cos = Math.cos(theta), sin = Math.sin(theta);
-                if (cos === 6.123233995736766e-17 || cos === -1.8369701987210297e-16) {
+                if (cos === 6123233995736766e-32 || cos === -18369701987210297e-32) {
                     cos = 0;
                 }
                 return [ cos, sin, -sin, cos, 0, 0 ];

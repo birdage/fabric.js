@@ -11767,11 +11767,11 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
 });
 
 
-(function(global) {
+(function (global) {
 
   'use strict';
 
-  var fabric = global.fabric || (global.fabric = { }),
+  var fabric = global.fabric || (global.fabric = {}),
       extend = fabric.util.object.extend,
       clone = fabric.util.object.clone,
       toFixed = fabric.util.toFixed,
@@ -12071,7 +12071,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @type String
      * @default
      */
-    type:                     'object',
+    type: 'object',
 
     /**
      * Horizontal origin of transformation of an object (one of "left", "right", "center")
@@ -12079,7 +12079,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @type String
      * @default
      */
-    originX:                  'left',
+    originX: 'left',
 
     /**
      * Vertical origin of transformation of an object (one of "top", "bottom", "center")
@@ -12087,147 +12087,147 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @type String
      * @default
      */
-    originY:                  'top',
+    originY: 'top',
 
     /**
      * Top position of an object. Note that by default it's relative to object top. You can change this by setting originY={top/center/bottom}
      * @type Number
      * @default
      */
-    top:                      0,
+    top: 0,
 
     /**
      * Left position of an object. Note that by default it's relative to object left. You can change this by setting originX={left/center/right}
      * @type Number
      * @default
      */
-    left:                     0,
+    left: 0,
 
     /**
      * Object width
      * @type Number
      * @default
      */
-    width:                    0,
+    width: 0,
 
     /**
      * Object height
      * @type Number
      * @default
      */
-    height:                   0,
+    height: 0,
 
     /**
      * Object scale factor (horizontal)
      * @type Number
      * @default
      */
-    scaleX:                   1,
+    scaleX: 1,
 
     /**
      * Object scale factor (vertical)
      * @type Number
      * @default
      */
-    scaleY:                   1,
+    scaleY: 1,
 
     /**
      * When true, an object is rendered as flipped horizontally
      * @type Boolean
      * @default
      */
-    flipX:                    false,
+    flipX: false,
 
     /**
      * When true, an object is rendered as flipped vertically
      * @type Boolean
      * @default
      */
-    flipY:                    false,
+    flipY: false,
 
     /**
      * Opacity of an object
      * @type Number
      * @default
      */
-    opacity:                  1,
+    opacity: 1,
 
     /**
      * Angle of rotation of an object (in degrees)
      * @type Number
      * @default
      */
-    angle:                    0,
+    angle: 0,
 
     /**
      * Angle of skew on x axes of an object (in degrees)
      * @type Number
      * @default
      */
-    skewX:                    0,
+    skewX: 0,
 
     /**
      * Angle of skew on y axes of an object (in degrees)
      * @type Number
      * @default
      */
-    skewY:                    0,
+    skewY: 0,
 
     /**
      * Size of object's controlling corners (in pixels)
      * @type Number
      * @default
      */
-    cornerSize:               13,
+    cornerSize: 13,
 
     /**
      * When true, object's controlling corners are rendered as transparent inside (i.e. stroke instead of fill)
      * @type Boolean
      * @default
      */
-    transparentCorners:       true,
+    transparentCorners: true,
 
     /**
      * Default cursor value used when hovering over this object on canvas
      * @type String
      * @default
      */
-    hoverCursor:              null,
+    hoverCursor: null,
 
     /**
      * Default cursor value used when moving this object on canvas
      * @type String
      * @default
      */
-    moveCursor:               null,
+    moveCursor: null,
 
     /**
      * Padding between object and its controlling borders (in pixels)
      * @type Number
      * @default
      */
-    padding:                  0,
+    padding: 0,
 
     /**
      * Color of controlling borders of an object (when it's active)
      * @type String
      * @default
      */
-    borderColor:              'rgba(102,153,255,0.75)',
+    borderColor: 'rgba(102,153,255,0.75)',
 
     /**
      * Array specifying dash pattern of an object's borders (hasBorder must be true)
      * @since 1.6.2
      * @type Array
      */
-    borderDashArray:          null,
+    borderDashArray: null,
 
     /**
      * Color of controlling corners of an object (when it's active)
      * @type String
      * @default
      */
-    cornerColor:              'rgba(102,153,255,0.5)',
+    cornerColor: 'rgba(102,153,255,0.5)',
 
     /**
      * Color of controlling corners of an object (when it's active and transparentCorners false)
@@ -12235,21 +12235,21 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @type String
      * @default
      */
-    cornerStrokeColor:        null,
+    cornerStrokeColor: null,
 
     /**
      * Specify style of control, 'rect' or 'circle'
      * @since 1.6.2
      * @type String
      */
-    cornerStyle:          'rect',
+    cornerStyle: 'rect',
 
     /**
      * Array specifying dash pattern of an object's control (hasBorder must be true)
      * @since 1.6.2
      * @type Array
      */
-    cornerDashArray:          null,
+    cornerDashArray: null,
 
     /**
      * When true, this object will use center point as the origin of transformation
@@ -12259,7 +12259,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @type Boolean
      * @default
      */
-    centeredScaling:          false,
+    centeredScaling: false,
 
     /**
      * When true, this object will use center point as the origin of transformation
@@ -12269,14 +12269,14 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @type Boolean
      * @default
      */
-    centeredRotation:         true,
+    centeredRotation: true,
 
     /**
      * Color of object's fill
      * @type String
      * @default
      */
-    fill:                     'rgb(0,0,0)',
+    fill: 'rgb(0,0,0)',
 
     /**
      * Fill rule used to fill an object
@@ -12285,7 +12285,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @type String
      * @default
      */
-    fillRule:                 'nonzero',
+    fillRule: 'nonzero',
 
     /**
      * Composite rule used for canvas globalCompositeOperation
@@ -12294,12 +12294,13 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      */
     globalCompositeOperation: 'source-over',
 
+    animationSrc: null,
     /**
      * Background color of an object.
      * @type String
      * @default
      */
-    backgroundColor:          '',
+    backgroundColor: '',
 
     /**
      * Selection Background color of an object. colored layer behind the object when it is active.
@@ -12307,82 +12308,82 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @type String
      * @default
      */
-    selectionBackgroundColor:          '',
+    selectionBackgroundColor: '',
 
     /**
      * When defined, an object is rendered via stroke and this property specifies its color
      * @type String
      * @default
      */
-    stroke:                   null,
+    stroke: null,
 
     /**
      * Width of a stroke used to render this object
      * @type Number
      * @default
      */
-    strokeWidth:              1,
+    strokeWidth: 1,
 
     /**
      * Array specifying dash pattern of an object's stroke (stroke must be defined)
      * @type Array
      */
-    strokeDashArray:          null,
+    strokeDashArray: null,
 
     /**
      * Line endings style of an object's stroke (one of "butt", "round", "square")
      * @type String
      * @default
      */
-    strokeLineCap:            'butt',
+    strokeLineCap: 'butt',
 
     /**
      * Corner style of an object's stroke (one of "bevil", "round", "miter")
      * @type String
      * @default
      */
-    strokeLineJoin:           'miter',
+    strokeLineJoin: 'miter',
 
     /**
      * Maximum miter length (used for strokeLineJoin = "miter") of an object's stroke
      * @type Number
      * @default
      */
-    strokeMiterLimit:         10,
+    strokeMiterLimit: 10,
 
     /**
      * Shadow object representing shadow of this shape
      * @type fabric.Shadow
      * @default
      */
-    shadow:                   null,
+    shadow: null,
 
     /**
      * Opacity of object's controlling borders when object is active and moving
      * @type Number
      * @default
      */
-    borderOpacityWhenMoving:  0.4,
+    borderOpacityWhenMoving: 0.4,
 
     /**
      * Scale factor of object's controlling borders
      * @type Number
      * @default
      */
-    borderScaleFactor:        1,
+    borderScaleFactor: 1,
 
     /**
      * Transform matrix (similar to SVG's transform matrix)
      * @type Array
      */
-    transformMatrix:          null,
+    transformMatrix: null,
 
     /**
      * Minimum allowed scale value of an object
      * @type Number
      * @default
      */
-    minScaleLimit:            0.01,
+    minScaleLimit: 0.01,
 
     /**
      * When set to `false`, an object can not be selected for modification (using either point-click-based or group-based selection).
@@ -12390,133 +12391,133 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @type Boolean
      * @default
      */
-    selectable:               true,
+    selectable: true,
 
     /**
      * When set to `false`, an object can not be a target of events. All events propagate through it. Introduced in v1.3.4
      * @type Boolean
      * @default
      */
-    evented:                  true,
+    evented: true,
 
     /**
      * When set to `false`, an object is not rendered on canvas
      * @type Boolean
      * @default
      */
-    visible:                  true,
+    visible: true,
 
     /**
      * When set to `false`, object's controls are not displayed and can not be used to manipulate object
      * @type Boolean
      * @default
      */
-    hasControls:              true,
+    hasControls: true,
 
     /**
      * When set to `false`, object's controlling borders are not rendered
      * @type Boolean
      * @default
      */
-    hasBorders:               true,
+    hasBorders: true,
 
     /**
      * When set to `false`, object's controlling rotating point will not be visible or selectable
      * @type Boolean
      * @default
      */
-    hasRotatingPoint:         true,
+    hasRotatingPoint: true,
 
     /**
      * Offset for object's controlling rotating point (when enabled via `hasRotatingPoint`)
      * @type Number
      * @default
      */
-    rotatingPointOffset:      40,
+    rotatingPointOffset: 40,
 
     /**
      * When set to `true`, objects are "found" on canvas on per-pixel basis rather than according to bounding box
      * @type Boolean
      * @default
      */
-    perPixelTargetFind:       false,
+    perPixelTargetFind: false,
 
     /**
      * When `false`, default object's values are not included in its serialization
      * @type Boolean
      * @default
      */
-    includeDefaultValues:     true,
+    includeDefaultValues: true,
 
     /**
      * Function that determines clipping of an object (context is passed as a first argument)
      * Note that context origin is at the object's center point (not left/top corner)
      * @type Function
      */
-    clipTo:                   null,
+    clipTo: null,
 
     /**
      * When `true`, object horizontal movement is locked
      * @type Boolean
      * @default
      */
-    lockMovementX:            false,
+    lockMovementX: false,
 
     /**
      * When `true`, object vertical movement is locked
      * @type Boolean
      * @default
      */
-    lockMovementY:            false,
+    lockMovementY: false,
 
     /**
      * When `true`, object rotation is locked
      * @type Boolean
      * @default
      */
-    lockRotation:             false,
+    lockRotation: false,
 
     /**
      * When `true`, object horizontal scaling is locked
      * @type Boolean
      * @default
      */
-    lockScalingX:             false,
+    lockScalingX: false,
 
     /**
      * When `true`, object vertical scaling is locked
      * @type Boolean
      * @default
      */
-    lockScalingY:             false,
+    lockScalingY: false,
 
     /**
      * When `true`, object non-uniform scaling is locked
      * @type Boolean
      * @default
      */
-    lockUniScaling:           false,
+    lockUniScaling: false,
 
     /**
      * When `true`, object horizontal skewing is locked
      * @type Boolean
      * @default
      */
-    lockSkewingX:             false,
+    lockSkewingX: false,
 
     /**
      * When `true`, object vertical skewing is locked
      * @type Boolean
      * @default
      */
-    lockSkewingY:             false,
+    lockSkewingY: false,
 
     /**
      * When `true`, object cannot be flipped by scaling into negative values
      * @type Boolean
      * @default
      */
-    lockScalingFlip:          false,
+    lockScalingFlip: false,
 
     /**
      * When `true`, object is not exported in SVG or OBJECT/JSON
@@ -12524,7 +12525,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @type Boolean
      * @default
      */
-    excludeFromExport:        false,
+    excludeFromExport: false,
 
     /**
      * When `true`, object is cached on an additional canvas.
@@ -12533,7 +12534,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @type Boolean
      * @default true
      */
-    objectCaching:            objectCaching,
+    objectCaching: objectCaching,
 
     /**
      * When `true`, object properties are checked for cache invalidation. In some particular
@@ -12545,7 +12546,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @type Boolean
      * @default false
      */
-    statefullCache:            false,
+    statefullCache: false,
 
     /**
      * When `true`, cache does not get updated during scaling. The picture will get blocky if scaled
@@ -12556,7 +12557,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @type Boolean
      * @default true
      */
-    noScaleCache:              true,
+    noScaleCache: true,
 
     /**
      * When set to `true`, object's cache will be rerendered next render call.
@@ -12564,7 +12565,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @type Boolean
      * @default true
      */
-    dirty:                true,
+    dirty: true,
 
     /**
      * List of properties to consider when checking if state
@@ -12592,8 +12593,8 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * Constructor
      * @param {Object} [options] Options object
      */
-    initialize: function(options) {
-      options = options || { };
+    initialize: function (options) {
+      options = options || {};
       if (options) {
         this.setOptions(options);
       }
@@ -12603,7 +12604,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * Create a the canvas used to keep the cached copy of the object
      * @private
      */
-    _createCacheCanvas: function() {
+    _createCacheCanvas: function () {
       this._cacheProperties = {};
       this._cacheCanvas = fabric.document.createElement('canvas');
       this._cacheContext = this._cacheCanvas.getContext('2d');
@@ -12625,7 +12626,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @return {Object}.zoomX zoomX zoom value to unscale the canvas before drawing cache
      * @return {Object}.zoomY zoomY zoom value to unscale the canvas before drawing cache
      */
-    _limitCacheSize: function(dims) {
+    _limitCacheSize: function (dims) {
       var perfLimitSizeTotal = fabric.perfLimitSizeTotal,
           width = dims.width, height = dims.height,
           max = fabric.maxCacheSideLimit, min = fabric.minCacheSideLimit;
@@ -12666,7 +12667,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @return {Object}.zoomX zoomX zoom value to unscale the canvas before drawing cache
      * @return {Object}.zoomY zoomY zoom value to unscale the canvas before drawing cache
      */
-    _getCacheCanvasDimensions: function() {
+    _getCacheCanvasDimensions: function () {
       var zoom = this.canvas && this.canvas.getZoom() || 1,
           objectScale = this.getObjectScaling(),
           retina = this.canvas && this.canvas._isRetinaScaling() ? fabric.devicePixelRatio : 1,
@@ -12691,7 +12692,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @private
      * @return {Boolean} true if the canvas has been resized
      */
-    _updateCacheCanvas: function() {
+    _updateCacheCanvas: function () {
       if (this.noScaleCache && this.canvas && this.canvas._currentTransform) {
         var target = this.canvas._currentTransform.target,
             action = this.canvas._currentTransform.action;
@@ -12713,7 +12714,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
             canvasHeight = this._cacheCanvas.height,
             sizeGrowing = width > canvasWidth || height > canvasHeight,
             sizeShrinking = (width < canvasWidth * 0.9 || height < canvasHeight * 0.9) &&
-              canvasWidth > minCacheSize && canvasHeight > minCacheSize;
+            canvasWidth > minCacheSize && canvasHeight > minCacheSize;
         shouldResizeCanvas = sizeGrowing || sizeShrinking;
         if (sizeGrowing && !dims.capped && (width > minCacheSize || height > minCacheSize)) {
           additionalWidth = width * 0.1;
@@ -12748,7 +12749,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * Sets object's properties from options
      * @param {Object} [options] Options object
      */
-    setOptions: function(options) {
+    setOptions: function (options) {
       this._setOptions(options);
       this._initGradient(options.fill, 'fill');
       this._initGradient(options.stroke, 'stroke');
@@ -12762,7 +12763,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {CanvasRenderingContext2D} ctx Context
      * @param {Boolean} fromLeft When true, context is transformed to object's top/left corner. This is used when rendering text on Node
      */
-    transform: function(ctx, fromLeft) {
+    transform: function (ctx, fromLeft) {
       if (this.group && !this.group._transformDone && this.group === this.canvas._activeGroup) {
         this.group.transform(ctx);
       }
@@ -12782,39 +12783,39 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {Array} [propertiesToInclude] Any properties that you might want to additionally include in the output
      * @return {Object} Object representation of an instance
      */
-    toObject: function(propertiesToInclude) {
+    toObject: function (propertiesToInclude) {
       var NUM_FRACTION_DIGITS = fabric.Object.NUM_FRACTION_DIGITS,
 
           object = {
-            type:                     this.type,
-            originX:                  this.originX,
-            originY:                  this.originY,
-            left:                     toFixed(this.left, NUM_FRACTION_DIGITS),
-            top:                      toFixed(this.top, NUM_FRACTION_DIGITS),
-            width:                    toFixed(this.width, NUM_FRACTION_DIGITS),
-            height:                   toFixed(this.height, NUM_FRACTION_DIGITS),
-            fill:                     (this.fill && this.fill.toObject) ? this.fill.toObject() : this.fill,
-            stroke:                   (this.stroke && this.stroke.toObject) ? this.stroke.toObject() : this.stroke,
-            strokeWidth:              toFixed(this.strokeWidth, NUM_FRACTION_DIGITS),
-            strokeDashArray:          this.strokeDashArray ? this.strokeDashArray.concat() : this.strokeDashArray,
-            strokeLineCap:            this.strokeLineCap,
-            strokeLineJoin:           this.strokeLineJoin,
-            strokeMiterLimit:         toFixed(this.strokeMiterLimit, NUM_FRACTION_DIGITS),
-            scaleX:                   toFixed(this.scaleX, NUM_FRACTION_DIGITS),
-            scaleY:                   toFixed(this.scaleY, NUM_FRACTION_DIGITS),
-            angle:                    toFixed(this.getAngle(), NUM_FRACTION_DIGITS),
-            flipX:                    this.flipX,
-            flipY:                    this.flipY,
-            opacity:                  toFixed(this.opacity, NUM_FRACTION_DIGITS),
-            shadow:                   (this.shadow && this.shadow.toObject) ? this.shadow.toObject() : this.shadow,
-            visible:                  this.visible,
-            clipTo:                   this.clipTo && String(this.clipTo),
-            backgroundColor:          this.backgroundColor,
-            fillRule:                 this.fillRule,
+            type: this.type,
+            originX: this.originX,
+            originY: this.originY,
+            left: toFixed(this.left, NUM_FRACTION_DIGITS),
+            top: toFixed(this.top, NUM_FRACTION_DIGITS),
+            width: toFixed(this.width, NUM_FRACTION_DIGITS),
+            height: toFixed(this.height, NUM_FRACTION_DIGITS),
+            fill: (this.fill && this.fill.toObject) ? this.fill.toObject() : this.fill,
+            stroke: (this.stroke && this.stroke.toObject) ? this.stroke.toObject() : this.stroke,
+            strokeWidth: toFixed(this.strokeWidth, NUM_FRACTION_DIGITS),
+            strokeDashArray: this.strokeDashArray ? this.strokeDashArray.concat() : this.strokeDashArray,
+            strokeLineCap: this.strokeLineCap,
+            strokeLineJoin: this.strokeLineJoin,
+            strokeMiterLimit: toFixed(this.strokeMiterLimit, NUM_FRACTION_DIGITS),
+            scaleX: toFixed(this.scaleX, NUM_FRACTION_DIGITS),
+            scaleY: toFixed(this.scaleY, NUM_FRACTION_DIGITS),
+            angle: toFixed(this.getAngle(), NUM_FRACTION_DIGITS),
+            flipX: this.flipX,
+            flipY: this.flipY,
+            opacity: toFixed(this.opacity, NUM_FRACTION_DIGITS),
+            shadow: (this.shadow && this.shadow.toObject) ? this.shadow.toObject() : this.shadow,
+            visible: this.visible,
+            clipTo: this.clipTo && String(this.clipTo),
+            backgroundColor: this.backgroundColor,
+            fillRule: this.fillRule,
             globalCompositeOperation: this.globalCompositeOperation,
-            transformMatrix:          this.transformMatrix ? this.transformMatrix.concat() : null,
-            skewX:                    toFixed(this.skewX, NUM_FRACTION_DIGITS),
-            skewY:                    toFixed(this.skewY, NUM_FRACTION_DIGITS)
+            transformMatrix: this.transformMatrix ? this.transformMatrix.concat() : null,
+            skewX: toFixed(this.skewX, NUM_FRACTION_DIGITS),
+            skewY: toFixed(this.skewY, NUM_FRACTION_DIGITS)
           };
 
       fabric.util.populateWithProperties(this, object, propertiesToInclude);
@@ -12831,7 +12832,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {Array} [propertiesToInclude] Any properties that you might want to additionally include in the output
      * @return {Object} Object representation of an instance
      */
-    toDatalessObject: function(propertiesToInclude) {
+    toDatalessObject: function (propertiesToInclude) {
       // will be overwritten by subclasses
       return this.toObject(propertiesToInclude);
     },
@@ -12840,15 +12841,15 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @private
      * @param {Object} object
      */
-    _removeDefaultValues: function(object) {
+    _removeDefaultValues: function (object) {
       var prototype = fabric.util.getKlass(object.type).prototype,
           stateProperties = prototype.stateProperties;
-      stateProperties.forEach(function(prop) {
+      stateProperties.forEach(function (prop) {
         if (object[prop] === prototype[prop]) {
           delete object[prop];
         }
         var isArray = Object.prototype.toString.call(object[prop]) === '[object Array]' &&
-                      Object.prototype.toString.call(prototype[prop]) === '[object Array]';
+          Object.prototype.toString.call(prototype[prop]) === '[object Array]';
 
         // basically a check for [] === []
         if (isArray && object[prop].length === 0 && prototype[prop].length === 0) {
@@ -12863,7 +12864,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * Returns a string representation of an instance
      * @return {String}
      */
-    toString: function() {
+    toString: function () {
       return '#<fabric.' + capitalize(this.type) + '>';
     },
 
@@ -12871,7 +12872,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * Return the object scale factor counting also the group scaling
      * @return {Object} object with scaleX and scaleY properties
      */
-    getObjectScaling: function() {
+    getObjectScaling: function () {
       var scaleX = this.scaleX, scaleY = this.scaleY;
       if (this.group) {
         var scaling = this.group.getObjectScaling();
@@ -12887,7 +12888,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {*} value
      * @return {fabric.Object} thisArg
      */
-    _set: function(key, value) {
+    _set: function (key, value) {
       var shouldConstrainValue = (key === 'scaleX' || key === 'scaleY'),
           isChanged = this[key] !== value;
 
@@ -12935,7 +12936,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * and value as parameters. Not adding in this function's signature to avoid
      * Travis build error about unused variables.
      */
-    setOnGroup: function() {
+    setOnGroup: function () {
       // implemented by sub-classes, as needed.
     },
 
@@ -12945,7 +12946,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @return {fabric.Object} thisArg
      * @chainable
      */
-    setSourcePath: function(value) {
+    setSourcePath: function (value) {
       this.sourcePath = value;
       return this;
     },
@@ -12956,7 +12957,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @memberOf fabric.Object.prototype
      * @return {Boolean}
      */
-    getViewportTransform: function() {
+    getViewportTransform: function () {
       if (this.canvas && this.canvas.viewportTransform) {
         return this.canvas.viewportTransform;
       }
@@ -12969,7 +12970,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @memberOf fabric.Object.prototype
      * @return {Boolean}
      */
-    isNotVisible: function() {
+    isNotVisible: function () {
       return this.opacity === 0 || (this.width === 0 && this.height === 0) || !this.visible;
     },
 
@@ -12978,7 +12979,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {CanvasRenderingContext2D} ctx Context to render on
      * @param {Boolean} [noTransform] When true, context is not transformed
      */
-    render: function(ctx, noTransform) {
+    render: function (ctx, noTransform) {
       // do not render if width/height are zeros or object is not visible
       if (this.isNotVisible()) {
         return;
@@ -13025,7 +13026,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
     /**
      * Remove cacheCanvas and its dimensions from the objects
      */
-    _removeCacheCanvas: function() {
+    _removeCacheCanvas: function () {
       this._cacheCanvas = null;
       this.cacheWidth = 0;
       this.cacheHeight = 0;
@@ -13040,7 +13041,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @type function
      * @return false
      */
-    needsItsOwnCache: function() {
+    needsItsOwnCache: function () {
       return false;
     },
 
@@ -13053,9 +13054,9 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {Boolean} noTransform if rendereing in pathGroup, caching is not supported at object level
      * @return {Boolean}
      */
-    shouldCache: function(noTransform) {
+    shouldCache: function (noTransform) {
       return !noTransform && this.objectCaching &&
-      (!this.group || this.needsItsOwnCache() || !this.group.isCaching());
+        (!this.group || this.needsItsOwnCache() || !this.group.isCaching());
     },
 
     /**
@@ -13063,7 +13064,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * used by Group.shouldCache to know if child has a shadow recursively
      * @return {Boolean}
      */
-    willDrawShadow: function() {
+    willDrawShadow: function () {
       return !!this.shadow && (this.shadow.offsetX !== 0 || this.shadow.offsetY !== 0);
     },
 
@@ -13072,7 +13073,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {CanvasRenderingContext2D} ctx Context to render on
      * @param {Boolean} [noTransform] When true, context is not transformed
      */
-    drawObject: function(ctx, noTransform) {
+    drawObject: function (ctx, noTransform) {
       this._renderBackground(ctx);
       this._setStrokeStyles(ctx);
       this._setFillStyles(ctx);
@@ -13083,7 +13084,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * Paint the cached copy of the object on the target context.
      * @param {CanvasRenderingContext2D} ctx Context to render on
      */
-    drawCacheOnCanvas: function(ctx) {
+    drawCacheOnCanvas: function (ctx) {
       ctx.scale(1 / this.zoomX, 1 / this.zoomY);
       ctx.drawImage(this._cacheCanvas, -this.cacheTranslationX, -this.cacheTranslationY);
     },
@@ -13093,7 +13094,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {Boolean} skipCanvas skip canvas checks because this object is painted
      * on parent canvas.
      */
-    isCacheDirty: function(skipCanvas) {
+    isCacheDirty: function (skipCanvas) {
       if (this.isNotVisible()) {
         return false;
       }
@@ -13119,7 +13120,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @private
      * @param {CanvasRenderingContext2D} ctx Context to render on
      */
-    _renderBackground: function(ctx) {
+    _renderBackground: function (ctx) {
       if (!this.backgroundColor) {
         return;
       }
@@ -13141,11 +13142,11 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @private
      * @param {CanvasRenderingContext2D} ctx Context to render on
      */
-    _setOpacity: function(ctx) {
+    _setOpacity: function (ctx) {
       ctx.globalAlpha *= this.opacity;
     },
 
-    _setStrokeStyles: function(ctx) {
+    _setStrokeStyles: function (ctx) {
       if (this.stroke) {
         ctx.lineWidth = this.strokeWidth;
         ctx.lineCap = this.strokeLineCap;
@@ -13157,7 +13158,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
       }
     },
 
-    _setFillStyles: function(ctx) {
+    _setFillStyles: function (ctx) {
       if (this.fill) {
         ctx.fillStyle = this.fill.toLive
           ? this.fill.toLive(ctx, this)
@@ -13172,7 +13173,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {Array} dashArray array representing dashes
      * @param {Function} alternative function to call if browaser does not support lineDash
      */
-    _setLineDash: function(ctx, dashArray, alternative) {
+    _setLineDash: function (ctx, dashArray, alternative) {
       if (!dashArray) {
         return;
       }
@@ -13192,7 +13193,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * Renders controls and borders for the object
      * @param {CanvasRenderingContext2D} ctx Context to render on
      */
-    _renderControls: function(ctx) {
+    _renderControls: function (ctx) {
       if (!this.active || (this.group && this.group !== this.canvas.getActiveGroup())) {
         return;
       }
@@ -13225,7 +13226,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @private
      * @param {CanvasRenderingContext2D} ctx Context to render on
      */
-    _setShadow: function(ctx) {
+    _setShadow: function (ctx) {
       if (!this.shadow) {
         return;
       }
@@ -13247,7 +13248,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @private
      * @param {CanvasRenderingContext2D} ctx Context to render on
      */
-    _removeShadow: function(ctx) {
+    _removeShadow: function (ctx) {
       if (!this.shadow) {
         return;
       }
@@ -13261,7 +13262,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {CanvasRenderingContext2D} ctx Context to render on
      * @param {Object} filler fabric.Pattern or fabric.Gradient
      */
-    _applyPatternGradientTransform: function(ctx, filler) {
+    _applyPatternGradientTransform: function (ctx, filler) {
       if (!filler.toLive) {
         return;
       }
@@ -13278,7 +13279,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @private
      * @param {CanvasRenderingContext2D} ctx Context to render on
      */
-    _renderFill: function(ctx) {
+    _renderFill: function (ctx) {
       if (!this.fill) {
         return;
       }
@@ -13298,7 +13299,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @private
      * @param {CanvasRenderingContext2D} ctx Context to render on
      */
-    _renderStroke: function(ctx) {
+    _renderStroke: function (ctx) {
       if (!this.stroke || this.strokeWidth === 0) {
         return;
       }
@@ -13321,7 +13322,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {Array} [propertiesToInclude] Any properties that you might want to additionally include in the output
      * @return {fabric.Object} clone of an instance
      */
-    clone: function(callback, propertiesToInclude) {
+    clone: function (callback, propertiesToInclude) {
       if (this.constructor.fromObject) {
         return this.constructor.fromObject(this.toObject(propertiesToInclude), callback);
       }
@@ -13335,9 +13336,9 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {Boolean} [options.enableRetinaScaling] enable retina scaling for the cloned image
      * @return {fabric.Object} thisArg
      */
-    cloneAsImage: function(callback, options) {
+    cloneAsImage: function (callback, options) {
       var dataUrl = this.toDataURL(options);
-      fabric.util.loadImage(dataUrl, function(img) {
+      fabric.util.loadImage(dataUrl, function (img) {
         if (callback) {
           callback(new fabric.Image(img));
         }
@@ -13358,8 +13359,8 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {Boolean} [options.enableRetina] Enable retina scaling for clone image. Introduce in 1.6.4
      * @return {String} Returns a data: URL containing a representation of the object in the format specified by options.format
      */
-    toDataURL: function(options) {
-      options || (options = { });
+    toDataURL: function (options) {
+      options || (options = {});
 
       var el = fabric.util.createCanvasElement(),
           boundingRect = this.getBoundingRect();
@@ -13404,7 +13405,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {String} type Type to check against
      * @return {Boolean}
      */
-    isType: function(type) {
+    isType: function (type) {
       return this.type === type;
     },
 
@@ -13412,7 +13413,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * Returns complexity of an instance
      * @return {Number} complexity of this instance (is 1 unless subclassed)
      */
-    complexity: function() {
+    complexity: function () {
       return 1;
     },
 
@@ -13421,7 +13422,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {Array} [propertiesToInclude] Any properties that you might want to additionally include in the output
      * @return {Object} JSON
      */
-    toJSON: function(propertiesToInclude) {
+    toJSON: function (propertiesToInclude) {
       // delegate, not alias
       return this.toObject(propertiesToInclude);
     },
@@ -13474,8 +13475,8 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * });
      * canvas.renderAll();
      */
-    setGradient: function(property, options) {
-      options || (options = { });
+    setGradient: function (property, options) {
+      options || (options = {});
 
       var gradient = { colorStops: [] };
 
@@ -13517,7 +13518,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      *   canvas.renderAll();
      * });
      */
-    setPatternFill: function(options) {
+    setPatternFill: function (options) {
       return this.set('fill', new fabric.Pattern(options));
     },
 
@@ -13543,7 +13544,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * });
      * canvas.renderAll();
      */
-    setShadow: function(options) {
+    setShadow: function (options) {
       return this.set('shadow', options ? new fabric.Shadow(options) : null);
     },
 
@@ -13553,7 +13554,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @return {fabric.Object} thisArg
      * @chainable
      */
-    setColor: function(color) {
+    setColor: function (color) {
       this.set('fill', color);
       return this;
     },
@@ -13564,7 +13565,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @return {fabric.Object} thisArg
      * @chainable
      */
-    setAngle: function(angle) {
+    setAngle: function (angle) {
       var shouldCenterOrigin = (this.originX !== 'center' || this.originY !== 'center') && this.centeredRotation;
 
       if (shouldCenterOrigin) {
@@ -13651,7 +13652,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @return {fabric.Object} thisArg
      * @chainable
      */
-    remove: function() {
+    remove: function () {
       if (this.canvas) {
         if (this.group && this.group === this.canvas._activeGroup) {
           this.group.remove(this);
@@ -13667,7 +13668,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @param {Object} [pointer] Pointer to operate upon (instead of event)
      * @return {Object} Coordinates of a pointer (x, y)
      */
-    getLocalPointer: function(e, pointer) {
+    getLocalPointer: function (e, pointer) {
       pointer = pointer || this.canvas.getPointer(e);
       var pClicked = new fabric.Point(pointer.x, pointer.y),
           objectLeftTop = this._getLeftTopCoords();
@@ -13714,11 +13715,11 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
    */
   fabric.Object.NUM_FRACTION_DIGITS = 2;
 
-  fabric.Object._fromObject = function(className, object, callback, forceAsync, extraParam) {
+  fabric.Object._fromObject = function (className, object, callback, forceAsync, extraParam) {
     var klass = fabric[className];
     object = clone(object, true);
     if (forceAsync) {
-      fabric.util.enlivenPatterns([object.fill, object.stroke], function(patterns) {
+      fabric.util.enlivenPatterns([object.fill, object.stroke], function (patterns) {
         if (typeof patterns[0] !== 'undefined') {
           object.fill = patterns[0];
         }
